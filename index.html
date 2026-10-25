@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff7f2">
+    <title>A little note for you</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <span class="decoration decoration-heart" aria-hidden="true">♡</span>
+        <span class="decoration decoration-sparkle" aria-hidden="true">✦</span>
+        <span class="decoration decoration-flower" aria-hidden="true">✿</span>
+        <span class="decoration decoration-tiny-heart" aria-hidden="true">♥</span>
+
+        <article class="apology-card" aria-labelledby="apology-title">
+            <p class="eyebrow"><span aria-hidden="true">🌷</span> just because</p>
+
+            <div class="bear" role="img" aria-label="A happy little bear holding a heart">
+                <span class="bear-face" aria-hidden="true">ʕ •ᴥ• ʔ</span>
+                <span class="bear-heart" aria-hidden="true">♥</span>
+            </div>
+
+            <h1 id="apology-title">I thought you might need this ♡</h1>
+            <p class="message">
+                Nothing’s wrong—I just wanted to send you a tiny note, a big smile,
+                and a little reminder that you’re someone special.
+            </p>
+
+            <div class="divider" aria-hidden="true"><span>♡</span></div>
+
+            <p class="soft-note">Consider this a little pocket-sized dose of extra love.</p>
+
+            <div class="actions">
+                <button class="button button-primary" type="button" data-message="A big, cozy hug is on its way to you! 🧸">
+                    <span aria-hidden="true">♡</span> Send me a hug
+                </button>
+                <button class="button button-secondary" type="button" data-message="Yay! Hope this made your day a little brighter. 🌼">
+                    You made me smile
+                </button>
+            </div>
+
+            <p class="response" aria-live="polite" aria-atomic="true"></p>
+            <p class="signature">with love, <span>Yusra</span> <span aria-hidden="true">♡</span></p>
+        </article>
+    </main>
+
+    <script>
+        const response = document.querySelector(".response");
+
+        document.querySelectorAll(".actions button").forEach((button) => {
+            button.addEventListener("click", () => {
+                response.textContent = button.dataset.message;
+            });
+        });
+    </script>
+</body>
+</html>

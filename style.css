@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap");
+
+:root {
+    color-scheme: light;
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    color: #573d45;
+    background: #fff7f2;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+button {
+    font: inherit;
+}
+
+.page {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    overflow: hidden;
+    padding: 40px 20px;
+    background:
+        radial-gradient(ellipse at 12% 14%, rgb(255 217 218 / 65%), transparent 32%),
+        radial-gradient(ellipse at 90% 84%, rgb(255 226 194 / 65%), transparent 32%),
+        #fff7f2;
+}
+
+.apology-card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 500px);
+    padding: 44px 48px 32px;
+    border: 1px solid rgb(255 255 255 / 90%);
+    border-radius: 30px;
+    background: rgb(255 255 255 / 88%);
+    box-shadow: 0 24px 70px rgb(114 67 76 / 12%), 0 4px 14px rgb(114 67 76 / 5%);
+    text-align: center;
+    animation: float-in 700ms ease-out both;
+}
+
+.eyebrow {
+    margin: 0 0 23px;
+    color: #a4777d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.eyebrow span {
+    margin-right: 5px;
+}
+
+.bear {
+    position: relative;
+    display: grid;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    place-items: center;
+    border: 1px solid #f8e1dc;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fff2e9, #ffe5e1);
+    box-shadow: inset 0 -7px 14px rgb(188 126 115 / 7%);
+}
+
+.bear-face {
+    color: #7c5651;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: -0.13em;
+    transform: translateX(-4px);
+}
+
+.bear-heart {
+    position: absolute;
+    right: 14px;
+    bottom: 20px;
+    color: #ee8291;
+    font-size: 1.75rem;
+    filter: drop-shadow(0 2px 2px rgb(180 92 105 / 15%));
+    animation: heartbeat 1.8s ease-in-out infinite;
+}
+
+h1 {
+    margin: 0 0 14px;
+    color: #633d49;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.15rem, 8vw, 2.8rem);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.12;
+}
+
+.message {
+    max-width: 365px;
+    margin: 0 auto;
+    color: #78646a;
+    font-size: 0.97rem;
+    line-height: 1.8;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin: 25px 0 18px;
+    color: #e9a0a5;
+}
+
+.divider::before,
+.divider::after {
+    height: 1px;
+    flex: 1;
+    background: #f3e3df;
+    content: "";
+}
+
+.divider span {
+    font-size: 1rem;
+}
+
+.soft-note {
+    margin: 0 auto 22px;
+    color: #967e82;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: grid;
+    gap: 10px;
+}
+
+.button {
+    min-height: 48px;
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:focus-visible {
+    outline: 3px solid #bd7785;
+    outline-offset: 3px;
+}
+
+.button-primary {
+    color: #fff;
+    background: #ce7885;
+    box-shadow: 0 5px 12px rgb(206 120 133 / 20%);
+}
+
+.button-primary:hover {
+    background: #bd6877;
+    box-shadow: 0 8px 16px rgb(206 120 133 / 26%);
+}
+
+.button-secondary {
+    border-color: #f0dfdc;
+    color: #785b61;
+    background: #fff;
+}
+
+.button-secondary:hover {
+    background: #fff8f6;
+}
+
+.response {
+    min-height: 24px;
+    margin: 14px 0 0;
+    color: #9e5c69;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.signature {
+    margin: 22px 0 0;
+    color: #a18b8d;
+    font-size: 0.82rem;
+}
+
+.signature span:first-child {
+    color: #80535d;
+    font-weight: 700;
+}
+
+.signature span:last-child {
+    color: #dc8994;
+}
+
+.decoration {
+    position: absolute;
+    color: #e7a0a5;
+    user-select: none;
+    animation: bob 4s ease-in-out infinite;
+}
+
+.decoration-heart {
+    top: 16%;
+    left: 16%;
+    font-size: 3rem;
+    transform: rotate(-14deg);
+}
+
+.decoration-sparkle {
+    top: 22%;
+    right: 18%;
+    color: #e6b875;
+    font-size: 2.2rem;
+    animation-delay: -1.2s;
+}
+
+.decoration-flower {
+    right: 13%;
+    bottom: 16%;
+    color: #d9909c;
+    font-size: 2.8rem;
+    animation-delay: -2s;
+}
+
+.decoration-tiny-heart {
+    bottom: 20%;
+    left: 19%;
+    color: #e8b887;
+    font-size: 1.5rem;
+    animation-delay: -0.7s;
+}
+
+@keyframes float-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    12% {
+        transform: scale(1.13);
+    }
+    24% {
+        transform: scale(1);
+    }
+    36% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes bob {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 24px 16px;
+    }
+
+    .apology-card {
+        padding: 36px 25px 27px;
+        border-radius: 25px;
+    }
+
+    .decoration-heart {
+        top: 5%;
+        left: 6%;
+        font-size: 2.2rem;
+    }
+
+    .decoration-sparkle {
+        top: 8%;
+        right: 7%;
+    }
+
+    .decoration-flower {
+        right: 5%;
+        bottom: 6%;
+        font-size: 2rem;
+    }
+
+    .decoration-tiny-heart {
+        bottom: 8%;
+        left: 7%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
